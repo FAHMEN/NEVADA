@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>NEVADA</title>
+    <title>Relax Songs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
             text-align: center;
             font-size: 16px;
-            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN96M5uTCr_N15IJlDxblq53e7aAcHrB84jA&usqp=CAU");
+            background-image: url("https://i.ibb.co/Z2HR8W7/a-man-stares-intently-at-the-camera-with-glowing-white-eyes-carrying-a-Palestinian-flag-and-behind-h.png");
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            color: white;
+            color: red;
         }
          h1:hover {
         text-shadow: 0 0 10px white; /* Add shadow on hover for glowing effect */
         }
            .quote-button:hover,
-           .play-button:hover,
            .creator-button:hover,
            .contact-button:hover,
            .policy-button:hover {
@@ -30,7 +29,12 @@
             margin-top: 10px;
             cursor: pointer;
         }
-
+        
+        F1 {
+            color: white;
+            font-size: 10px;
+        }
+        
         .quote-button {
             position: absolute;
             top: 10px;
@@ -54,7 +58,6 @@
         }
 
         .contact-button,
-        .play-button,
         .policy-button,
         .creator-button {
             margin-top: 10px;
@@ -102,6 +105,27 @@
         }
     </style>
     
+    <style>
+     .song-title {
+        font-size: 1em; /* Sesuaikan ukuran sesuai kebutuhan Anda */
+        }
+</style>
+
+    <style>
+        .audio-group {
+            text-align: center;
+        }
+
+        .song-title {
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .audio-container {
+            display: none;
+        }
+    </style>
+
     <div id="particles"></div>
 
     <script>
@@ -162,47 +186,111 @@
 </head>
 <body>
     <button class="quote-button" onclick="window.location.href='https://fahmen.github.io/choose-language/'">Quotes</button>
-    <h1 onclick="titleClick()">NEVADA</h1>
-    <div class="video-container">
-        <iframe width="100%" height="225" src="https://www.youtube.com/embed/O22PREgrjxA" frameborder="0" allowfullscreen></iframe>
+    <h1 onclick="titleClick()">Relax Songs</h1>
     </div>
-    <p>
-        <strong>
-            I've been painting every fence I know<br>
-            Every color bleeds into the same<br>
-            'Cause before you go and walk away<br>
-            Yeah, you better know where you're going<br>
-            Hey ya, hey ya<br>
-            You're a wanderer, just like me<br>
-            Hey ya, hey ya<br>
-            Yeah, you better know where you're going<br>
-            Yeah, you better know where you're going<br>
-            I've been painting every fence I know<br>
-            Every color bleeds into the same<br>
-            'Cause before you go and walk away<br>
-            Yeah, you better know where you're going<br>
-            Hey ya, hey ya<br>
-            You're a wanderer just like me<br>
-            Hey ya, hey ya<br>
-            Yeah, you better know where you're going<br>
-            Yeah, you better know where you're going<br>
-            Hey ya, hey ya<br>
-            You're a wanderer just like me<br>
-            Hey ya, hey ya<br>
-            Yeah, you better know where you're going<br>
-            Yeah, you better know where you're going<br>
-            Yeah, you better know where you're going<br>
-            You're a wanderer just like me<br>
-            Yeah, you better know where you're going<br>
-            You're a wanderer just like me<br>
-        </strong>
-    </p>
+
+
+            <div class="button-container">
+        <!-- Tombol-tombol lainnya tetap tidak berubah -->
+         <F1 class="song-title">▷double click the title◁</F1>
+<div class="audio-group">
+    <!-- Pemutar Lagu 1 -->
+    <p class="song-title" onclick="toggleAudio('audio1')">The End</p>
+    <div id="audio1" class="audio-container">
+        <audio controls title="Judul Lagu 1">
+            <source src="https://rr1---sn-npoldn7e.googlevideo.com/videoplayback?expire=1700385267&ei=k31ZZejzNoif_9EPk_6XQA&ip=161.0.28.80&id=o-AJWBJV-bQN1XA34_pZeF_wmJnE13zp3-v39xmT4w-jL3&itag=250&source=youtube&requiressl=yes&spc=UWF9fz5ioN97SWQioOyUSoIftNf1zkM&vprv=1&svpuc=1&mime=audio%2Fwebm&gir=yes&clen=94176431&dur=11060.361&lmt=1689754338697167&keepalive=yes&fexp=24007246,24472445&beids=24472445&c=ANDROID&txp=4532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&sig=ANLwegAwRgIhAPjpPlXhu483uRrUsxC2Sv-0xj7Dq1d264pQ7ljCm2SvAiEA0ZpU1itNcYqjIl98gcd3CSAXVkM7LV_SvABsZFQqW9w%3D&rm=sn-ab5eld7e&req_id=9a7588b27fea3ee&redirect_counter=2&cm2rm=sn-jpug5-wvbl7e&cms_redirect=yes&cmsv=e&ipbypass=yes&mh=J0&mip=103.169.39.20&mm=29&mn=sn-npoldn7e&ms=rdu&mt=1700363363&mv=m&mvi=1&pl=24&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AM8Gb2swRQIgd9kpmtUxeNUyAIdpQ9--31jJajDCSemcGrpguio2dXsCIQC_hQJMKlrAsjVXP4m_fAf_9iqIUYqF0TlRSvmIMXsKTw%3D%3D" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Pemutar Lagu 2 -->
+    <p class="song-title" onclick="toggleAudio('audio2')">Dreamer</p>
+    <div id="audio2" class="audio-container">
+        <audio controls title="Judul Lagu 2">
+            <source src="https://rr2---sn-npoe7ner.googlevideo.com/videoplayback?expire=1700392538&ei=-plZZbfNIY348gTjm5Nw&ip=185.161.255.44&id=o-ANxu7buEGJVmZS3fh6bhw95lfJ6i2L9v9J1O0qVa9f3u&itag=139&source=youtube&requiressl=yes&spc=UWF9fxYELmhH7pNOo4d-4D9QpZT4-00&vprv=1&svpuc=1&mime=audio%2Fmp4&gir=yes&clen=22225804&dur=3644.789&lmt=1679621974436511&keepalive=yes&fexp=24007246,24350018&beids=24350018&c=ANDROID&txp=4532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&sig=ANLwegAwRQIhAJWekKeYvQNrzP1lbD7cTRV_o4arDGe3t0GEaxZB4gryAiAmf-5ffgCBqJSNcEexELdo0zPTuXVRvFobHESHrtcjCg%3D%3D&rm=sn-ab5eey7e,sn-jpug5-wvbl7l&req_id=ed1939d3fea2a3ee&redirect_counter=2&cms_redirect=yes&cmsv=e&ipbypass=yes&mh=Pu&mip=103.169.39.20&mm=29&mn=sn-npoe7ner&ms=rdu&mt=1700370549&mv=m&mvi=2&pl=24&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AM8Gb2swRgIhAPxUuLLwiYENvqYmc2tZzVRd5oZjYr5tmO0Vb8lVwpFqAiEA5KbP1NPPuSqf-qQtY7uIHp-a9ngbMSeR11LsCnWJaoU%3D" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Pemutar Lagu 3 -->
+    <p class="song-title" onclick="toggleAudio('audio3')">Heal</p>
+    <div id="audio3" class="audio-container">
+        <audio controls title="Judul Lagu 3">
+            <source src="https://rr2---sn-npoe7nsr.googlevideo.com/videoplayback?expire=1700401805&ei=Lb5ZZc2KEI-p1gKc4pLYBA&ip=176.125.230.9&id=o-AHuSFp30v_eV7jgG6YIEN8VJkV37nYZMYhgYDDThFqqz&itag=140&source=youtube&requiressl=yes&spc=UWF9f1IK6nEkuUZr6_ZTTcnSJbgJgJY&vprv=1&svpuc=1&mime=audio%2Fmp4&gir=yes&clen=194529382&dur=12019.901&lmt=1688106786938313&keepalive=yes&fexp=24007246,24350018&beids=24350018&c=ANDROID&txp=5532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&sig=ANLwegAwRgIhAInKGvUdc9YnL7yo-Zb1oguKtyOkwaco8iva9pgOS22nAiEAzK6bpBUwWqBJl-GvIZn4FnPFc_paXZ0EaSXqCuYDE7o%3D&redirect_counter=1&rm=sn-4g5ekl7e&req_id=255d7d18b839a3ee&cms_redirect=yes&cmsv=e&ipbypass=yes&mh=rw&mip=202.46.70.23&mm=31&mn=sn-npoe7nsr&ms=au&mt=1700379915&mv=m&mvi=2&pl=24&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AM8Gb2swRgIhAKQXdE6cm2U5M3dMLtXfW7ZkApMM7F22--zfVthsI_WbAiEAku6NZWCh-BFVNd1-PjZhcGzfnsBaDA6peI4loto35_4%3D" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Pemutar Lagu 4 -->
+    <p class="song-title" onclick="toggleAudio('audio4')">Alone</p>
+    <div id="audio4" class="audio-container">
+        <audio controls title="Judul Lagu 4">
+            <source src="https://rr1---sn-4g5ednde.googlevideo.com/videoplayback?expire=1700403359&ei=P8RZZcWGMYHB6dsPqvCFIA&ip=138.199.18.144&id=o-AGagzs1IwHXsFK-hc9cTZEKs12A8L5GJRPvQhIqtPLvn&itag=140&source=youtube&requiressl=yes&spc=UWF9fwP21MiMRiYUugbONVki25N8v2o&vprv=1&svpuc=1&mime=audio%2Fmp4&gir=yes&clen=191270934&dur=11818.561&lmt=1699667536386692&keepalive=yes&fexp=24007246,24350018&beids=24350018&c=ANDROID&txp=5432434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&sig=ANLwegAwRQIgKcbT9iCNvOuVD1lWD7UkJ58qYKQWQARvXXbYIXVzzyYCIQCaLNpptXy01YeNXv_qkLK9VdenMFsCxKA3LJ5DSFg1KA%3D%3D&redirect_counter=1&rm=sn-n02xgoxufvg3-2gb67e&req_id=19a046edc8e5a3ee&cms_redirect=yes&cmsv=e&ipbypass=yes&mh=MF&mm=29&mn=sn-4g5ednde&ms=rdu&mt=1700381349&mv=m&mvi=1&pl=23&lsparams=ipbypass,mh,mm,mn,ms,mv,mvi,pl&lsig=AM8Gb2swRQIhAObO1NK7vzxh4YGZQcg7TtbT5YKGpMfFY6Six09e9HPpAiBF1ws_lbtzVGTxqDKb7_NQBUfKAzaTiO4m03xsIMR1Vg%3D%3D" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+        <!-- Pemutar Lagu 5 -->
+    <p class="song-title" onclick="toggleAudio('audio5')">Interstellar</p>
+    <div id="audio5" class="audio-container">
+        <audio controls title="Judul Lagu 5">
+            <source src="https://rr1---sn-npoe7nl6.googlevideo.com/videoplayback?expire=1700391828&ei=NJdZZcGJJIyn6dsPraCy-AQ&ip=143.244.52.23&id=o-ALZ54gotQFQnGNdhSwgzZ2tOC9PEOc4VQ59CgfDFBAkB&itag=140&source=youtube&requiressl=yes&spc=UWF9f4IKSYlVPOYPn42GpeuZfGOy_JA&vprv=1&svpuc=1&mime=audio%2Fmp4&gir=yes&clen=58267179&dur=3600.277&lmt=1699148396695210&keepalive=yes&fexp=24007246,24350018&beids=24350018&c=ANDROID&txp=5532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&sig=ANLwegAwRQIhAM0yMIR89fOxI6R1DlX-b-B-1AN0UgEnEZyV9RT6T72_AiBXl8CwawbytZc0Jp3f_uVEoQmSECggReJksvB6HfGZow%3D%3D&rm=sn-c0qlk7z,sn-0ot-wvbz7l&req_id=d6a923a5947fa3ee&ipbypass=yes&redirect_counter=2&cms_redirect=yes&cmsv=e&mh=yU&mip=103.131.105.85&mm=29&mn=sn-npoe7nl6&ms=rdu&mt=1700382074&mv=m&mvi=1&pl=24&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AM8Gb2swRQIgXiIRi0tRMtrAeN9HRsY-Umhbr0hEj3-TTeBtK2njQeICIQDGBdzGRUp495WyNNLtET-6vOQoJ1Kvx3QtcC4q9WegeQ%3D%3D" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+            <!-- Pemutar Lagu 6 -->
+    <p class="song-title" onclick="toggleAudio('audio6')">Sad</p>
+    <div id="audio6" class="audio-container">
+        <audio controls title="Judul Lagu 6">
+            <source src="https://rr4---sn-npoe7nek.googlevideo.com/videoplayback?expire=1700387060&ei=lIRZZZyPDpHC6dsPoayTyAQ&ip=84.247.116.213&id=o-AFGAXK4p8soTzkpAASgIRW13bQ86fms4CF-QzjyPZV_l&itag=600&source=youtube&requiressl=yes&spc=UWF9f4gb4x-ZG0-bB2FHKxejff23ykk&vprv=1&svpuc=1&mime=audio%2Fwebm&gir=yes&clen=12293134&dur=2897.281&lmt=1698735537948517&keepalive=yes&fexp=24007246,24350018&beids=24350018&c=ANDROID&txp=4532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&sig=ANLwegAwRQIhAPsxxSVpABS9EmNe3fmRjKPmmtTwR3muZgXmB1uUB10eAiBetzEGg--qUZn-54_0XaJrLypO2RH6-VI-_ZdeyoRwKQ%3D%3D&redirect_counter=1&rm=sn-5hnelk76&req_id=4ac8c74bacaa3ee&cms_redirect=yes&cmsv=e&ipbypass=yes&mh=Oc&mip=202.46.70.23&mm=31&mn=sn-npoe7nek&ms=au&mt=1700382322&mv=m&mvi=4&pl=24&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AM8Gb2swRQIgGimOf_iEuNHZ3UFApo5c1VExqp9KeN3jJDRVlkCgumQCIQDp2RMg9N9qwmCYrcbF7LvcewOk9YwVLRmplQfX3DUoxw%3D%3D" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+                <!-- special 7 -->
+    <p class="song-title" onclick="toggleAudio('audio7')">Quran</p>
+    <div id="audio7" class="audio-container">
+        <audio controls title="Judul Lagu 7">
+            <source src="https://rr4---sn-npoeenll.googlevideo.com/videoplayback?expire=1700388227&ei=I4lZZe7NK4GYsfIPmYufoAo&ip=191.101.61.123&id=o-AAJgRki0VIpxTAjD1V0_CSCkCAtGh0eJHn5XbDxSlHpV&itag=140&source=youtube&requiressl=yes&spc=UWF9f288WXmfHrQQ0f4bRPqEevjNyL4&vprv=1&svpuc=1&mime=audio%2Fmp4&gir=yes&clen=61446016&dur=3796.694&lmt=1697525794867760&keepalive=yes&fexp=24007246,24350018&beids=24350018&c=ANDROID&txp=5532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&sig=ANLwegAwRgIhALMv8Bhgymtx5zPZKb1wS6lDbTZ5vAPKiKCM0AwdOhgYAiEA8qbg60GahxIb0GYOPdKs9Dn7MhLnfpaBsEBt-RYm4Jk%3D&redirect_counter=1&rm=sn-a5meed7l&req_id=381b2d65bdcba3ee&cms_redirect=yes&cmsv=e&ipbypass=yes&mh=ra&mip=202.46.70.23&mm=31&mn=sn-npoeenll&ms=au&mt=1700383030&mv=m&mvi=4&pl=24&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AM8Gb2swRAIgRhuBZP-4ru12zQL0F_8Ya8YvCIOyD7Vmqc2C3QWlbbYCIA3FrjgYt_8JBTRct6JfhUPEpAk3PlfU1hDihiUYUHEw" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+            <!-- Pemutar Lagu 8 -->
+    <p class="song-title" onclick="toggleAudio('audio8')">Calm</p>
+    <div id="audio8" class="audio-container">
+        <audio controls title="Judul Lagu 8">
+            <source src="https://rr2---sn-npoe7nsy.googlevideo.com/videoplayback?expire=1700405289&ei=yctZZfu7LseG8wSGp6JI&ip=84.247.112.82&id=o-AFD5iPmwgCxbaUMpyTKN-ILK90iXk-RpeO9E-xTe_SH1&itag=140&source=youtube&requiressl=yes&spc=UWF9f-dn1ycIxYOwo_zHnzu_k-fGkvo&vprv=1&svpuc=1&mime=audio%2Fmp4&gir=yes&clen=475082674&dur=29355.245&lmt=1697610499475511&keepalive=yes&fexp=24007246,24350018&beids=24350018&c=ANDROID&txp=5532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&sig=ANLwegAwRgIhAPckb3_4z4Azsx3nOYktnhgfmwhxvRcm-Um8b2ZJJTYHAiEA1Fqtme53j-tl9PLwlSZp1uq8R0rMCyarOR6MiF7Co9g%3D&redirect_counter=1&rm=sn-ab5ely7s&req_id=a2b28f044954a3ee&cms_redirect=yes&cmsv=e&ipbypass=yes&mh=O3&mip=202.46.70.23&mm=31&mn=sn-npoe7nsy&ms=au&mt=1700383271&mv=m&mvi=2&pl=24&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AM8Gb2swRgIhAPtf1QyU_mD-Daugb32an3uOK704mKTb1Aiqgy_WjoJaAiEAo6glfDbXQo7VXIzsRAIY9HoNPqVVqMbG0CEmaGAWGkM%3D" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+                <!-- Pemutar Lagu 9 -->
+    <p class="song-title" onclick="toggleAudio('audio9')">Minecraft</p>
+    <div id="audio9" class="audio-container">
+        <audio controls title="Judul Lagu 9">
+            <source src="https://rr1---sn-npoldn76.googlevideo.com/videoplayback?expire=1700405721&ei=ec1ZZaHeMMWVi9oPmaeeyAE&ip=147.78.227.242&id=o-ALnT1ieBDMntiBWN4PDl3rZkULmdg28xzKI9DbMlU2aN&itag=140&source=youtube&requiressl=yes&spc=UWF9f-5YP6JmwGgSNT-aYCimb6QRzQg&vprv=1&svpuc=1&mime=audio%2Fmp4&gir=yes&clen=58345051&dur=3605.083&lmt=1552994694033470&keepalive=yes&fexp=24007246,24350018&beids=24350018&c=ANDROID&txp=5535432&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&sig=ANLwegAwRAIgbqa5YzwGEgOGOtbj75GykqDVFdACAojJiqqJ10fkROkCIACk7Yt3KlndaW3YQJ-XerxifK8fez_qkF2IFhGJbzZy&redirect_counter=1&rm=sn-5hnezs7z&req_id=fa72e8d97f2fa3ee&cms_redirect=yes&cmsv=e&ipbypass=yes&mh=X9&mip=202.46.70.25&mm=31&mn=sn-npoldn76&ms=au&mt=1700383760&mv=m&mvi=1&pl=24&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AM8Gb2swRQIgSGME9SHtV3zm8GXZAfxls3nmFulUX_K-QXXaD6X3PiQCIQCLSPWDrrYaEdvHmQY95YIJzdakCjYcwm-eHse28V8brw%3D%3D" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+                    <!-- Pemutar Lagu 10 -->
+    <p class="song-title" onclick="toggleAudio('audio10')">Alpha Music</p>
+    <div id="audio10" class="audio-container">
+        <audio controls title="Judul Lagu 10">
+            <source src="https://rr5---sn-npoldn7s.googlevideo.com/videoplayback?expire=1700399310&ei=brRZZa_OBcL_kgbC0rzgCA&ip=191.96.255.159&id=o-APmPD9Nx4RriLmUa_i-NxC7ghROTvNlICsOCUDfHzOG0&itag=139&source=youtube&requiressl=yes&spc=UWF9f2Y31X8n8b9tcTFRPKZlOvS4l9Q&vprv=1&svpuc=1&mime=audio%2Fmp4&gir=yes&clen=87024933&dur=14271.447&lmt=1699406217395257&keepalive=yes&fexp=24007246,24350018&beids=24350018&c=ANDROID&txp=4532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&sig=ANLwegAwRQIhAKBtni4tYDMvxUqV77ZoM8RQXxOjUTpJKehwCSvvBk_tAiAB-nR5vvUf93xVHbCY3JnAOKKmpIrO9tSZEcqaB6pheg%3D%3D&redirect_counter=1&rm=sn-a5meed7e&req_id=bf0f44a1a23da3ee&cms_redirect=yes&cmsv=e&ipbypass=yes&mh=df&mip=202.46.70.22&mm=31&mn=sn-npoldn7s&ms=au&mt=1700384475&mv=m&mvi=5&pl=24&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=AM8Gb2swRQIhAJU7pqxDgbLUvp3M2JVrxYjRj-AQEZybjf3yT0hLRjZvAiAxa13sXabRgQhkUrGxxFToxk4G11PZFzCXSs9BEKTbIg%3D%3D" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    
+    
     <div class="button-container">
-        <button class="play-button" onclick="playAudio()">Play</button>
         <button class="creator-button" onclick="showCreator()">Creator</button>
-        <a class="contact-button" href="https://api.whatsapp.com/send?phone=+79269175361&text=hello%20I%20want%20to%20talk">Contact Us</a>
+        <a class="contact-button" <a href="mailto:anonymousteam91@gmail.com@gmail.com">Contact Us</a>
         <a class="policy-button" href="#" onclick="showPolicy()">Policy & Privacy</a>
-        <a href="http://users.smartgb.com/g/g.php?a=s&amp;i=g19-00997-0e">Guestbook</a>
+<a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-35369-48">Guestbook</a>
+
     </div>
 
     <div id="particles"></div>
@@ -213,19 +301,37 @@
     </audio>
 
     <script>
-        function playAudio() {
-            var audio = document.getElementById('audio');
-            audio.play();
-        }
-
          function showPolicy() {
-            alert("Rules:\n\n [] Last updated: August 22, 2023\n [] We do not collect any information about you :\n                                                        \n1. Provide and improve your experience on our website.\n2. give you the experience of singing this beautiful song. \n3  try to fill your free time by singing songs.");
+            alert("Rules:\n\n [] Last updated: August 22, 2023\n [] We do not collect any information about you :\n                                                        \n1. Provide and improve your experience on our website.\n2. Give you a wonderful song listening experience.  \n3  Fill your free time by listening songs.");
         }
 
         function showCreator() {
             alert("©Fahril Ahmad");
         }
     </script>
+    
+    <script>
+    function toggleAudio(audioId) {
+        var audioContainer = document.getElementById(audioId);
+        var audio = audioContainer.querySelector('audio');
+        audioContainer.style.display = audioContainer.style.display == 'none' ? 'block' : 'none';
+
+        // Pause audio when hiding
+        if (audioContainer.style.display === 'none') {
+            audio.pause();
+        }
+    }
+
+    function showMore() {
+        var audioContainers = document.querySelectorAll('.audio-container');
+        audioContainers.forEach(function (container) {
+            container.style.display = 'block';
+        });
+
+        // Hide the "Show More" button
+        document.getElementById('showMoreButton').style.display = 'none';
+    }
+</script>
     
     <script>
     // Mencegah klik kanan di seluruh halaman
@@ -250,4 +356,4 @@
     };
      </script>
 </body>
-</html>
+                </html>
