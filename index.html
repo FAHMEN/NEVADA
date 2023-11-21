@@ -3,7 +3,6 @@
 <head>
     <title>Relax Music</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <body onbeforeunload="return confirmRefresh();">
     <style>
         body {
             text-align: center;
@@ -142,8 +141,8 @@
             var particleElements = document.getElementsByClassName('particle');
             for (var i = 0; i < particleElements.length; i++) {
                 var particle = particleElements[i];
-                var delay = Math.random() * 1000;
-                var duration = Math.random() * 1000;
+                var delay = Math.random() * 1900;
+                var duration = Math.random() * 100;
 
                 particle.style.left = Math.random() * 100 + 'vw';
                 particle.style.top = Math.random() * 100 + 'vh';
@@ -332,13 +331,7 @@
         // Hide the "Show More" button
         document.getElementById('showMoreButton').style.display = 'none';
     }
-</script>
-
-<script type="text/javascript">
-function confirmRefresh() {
-  return confirm("Apakah Anda yakin ingin me-refresh halaman ini? Semua perubahan yang belum disimpan akan hilang.");
-}
-</script>
+     </script>
     
     <script>
     // Mencegah klik kanan di seluruh halaman
