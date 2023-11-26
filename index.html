@@ -13,15 +13,6 @@
             background-attachment: fixed;
             color: red;
         }
-         h1:hover {
-        text-shadow: 0 0 10px white; /* Add shadow on hover for glowing effect */
-        }
-           .quote-button:hover,
-           .creator-button:hover,
-           .contact-button:hover,
-           .policy-button:hover {
-        box-shadow: 0 0 10px white; /* Add box shadow on hover for glowing effect */
-        }
         
         h1 {
             color: white;
@@ -34,22 +25,17 @@
             color: white;
             font-size: 10px;
         }
-        
-        .quote-button {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: transparent;
-            border: none;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
+       
 
         .video-container {
             width: 100%;
             max-width: 400px;
             margin: 10px auto;
+        }
+        
+           .white-text {
+            color: white;
+            margin-top: auto;
         }
 
         p {
@@ -185,7 +171,6 @@
     </script>
 </head>
 <body>
-    <button class="quote-button" onclick="window.location.href='https://relaxfax.rf.gd'">Quotes</button>
     <h1 onclick="titleClick()">Relax Music</h1>
     </div>
 
@@ -293,24 +278,8 @@
         </audio>
     </div>
     
-    
-    <div class="button-container">
-        <button class="creator-button" onclick="showCreator()">Creator</button>
-        <a class="contact-button" <a href="mailto:anonymousteam91@gmail.com">Contact Us</a>
-        <a class="policy-button" href="#" onclick="showPolicy()">Policy & Privacy</a>
-
+    <p class="white-text">©fahril ahmad</p>
     </div>
-
-    <script>
-         function showPolicy() {
-            alert("Rules:\n\n [] Last updated: August 22, 2023\n [] We do not collect any information about you :\n                                                        \n1. Provide and improve your experience on our website.\n2. Give you a wonderful music listening experience.  \n3  Fill your free time by listening music.");
-        }
-
-        function showCreator() {
-            alert("©Fahril Ahmad");
-        }
-    </script>
-    
     <script>
     function toggleAudio(audioId) {
         var audioContainer = document.getElementById(audioId);
@@ -334,27 +303,5 @@
     }
      </script>
     
-    <script>
-    // Mencegah klik kanan di seluruh halaman
-    document.addEventListener('contextmenu', function (e) {
-        e.preventDefault();
-    });
-
-    // Mencegah kombinasi keyboard untuk membuka developer tools
-    document.onkeydown = function (e) {
-        if (e.keyCode == 123) {
-            return false;
-        }
-        if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-            return false;
-        }
-        if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-            return false;
-        }
-        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-            return false;
-        }
-    };
-     </script>
 </body>
-    </html>
+        </html>
