@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Relax Music</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Relax Music</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="to/fav.png" type="image/png">
     <style>
         body {
             text-align: center;
@@ -13,6 +14,16 @@
             background-attachment: fixed;
             color: red;
         }
+         h1:hover {
+        text-shadow: 0 0 10px white; /* Add shadow on hover for glowing effect */
+        }
+           .quote-button:hover,
+           .creator-button:hover,
+           .contact-button:hover,
+           .donate:hover,
+           .policy-button:hover {
+        box-shadow: 0 0 10px white; /* Add box shadow on hover for glowing effect */
+        }
         
         h1 {
             color: white;
@@ -21,22 +32,61 @@
             cursor: pointer;
         }
         
+                   .white-text {
+            color: white;
+            margin-top: auto;
+            margin-bottom: 10px;
+        }
+        
         F1 {
             color: white;
             font-size: 10px;
         }
-       
+        
+           .donate {
+            color: white;
+            margin-top: 10px;
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: transparent;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .guestbook {
+            color: white;
+        }
+        
+        .quote-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: transparent;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .notice {
+            position: absolute;
+            top: 10px;
+            right: 10px; /* Mengubah dari left menjadi right */
+            background: transparent;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
 
         .video-container {
             width: 100%;
             max-width: 400px;
             margin: 10px auto;
-        }
-        
-           .white-text {
-            color: white;
-            margin-top: auto;
-            margin-bottom: 10px;
         }
 
         p {
@@ -172,6 +222,7 @@
     </script>
 </head>
 <body>
+    <button class="quote-button" onclick="window.location.href='https://google.com'">Google 🤨</button>
     <h1 onclick="titleClick()">Relax Music</h1>
     </div>
 
@@ -180,138 +231,154 @@
         <!-- Tombol-tombol lainnya tetap tidak berubah -->
          <F1 class="song-title">▷double click the title◁</F1>
 <div class="audio-group">
-        <!-- Pemutar Lagu 1 -->
-    <p class="song-title" onclick="toggleAudio('audio1')">The End</p>
-    <div id="audio1" class="audio-container">
-        <audio controls title="Judul Lagu 1">
-            <source src="https://e.top4top.io/m_29053b4bo1.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
+  <p class="song-title" onclick="toggleAudio('audio1')">The End</p>
+  <div id="audio1" class="audio-container">
+    <audio preload="auto" style="display: none;">
+      <source src="https://e.top4top.io/m_29053b4bo1.mp3" type="audio/mp3">
+    </audio>
+  </div>
 
-    <!-- Pemutar Lagu 2 -->
-    <p class="song-title" onclick="toggleAudio('audio2')">Dreamer</p>
-    <div id="audio2" class="audio-container">
-        <audio controls title="Judul Lagu 2">
-            <source src="https://dl.sndup.net/zmg6/music%20for%20reading.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
+<div class="audio-group">
+  <p class="song-title" onclick="toggleAudio('audio2')">Dreamer</p>
+  <div id="audio2" class="audio-container">
+    <audio preload="auto" style="display: none;">
+      <source src="https://dl.sndup.net/zmg6/music%20for%20reading.mp3" type="audio/mp3">
+    </audio>
+  </div>
 
-    <!-- Pemutar Lagu 3 -->
-    <p class="song-title" onclick="toggleAudio('audio3')">Heal</p>
-    <div id="audio3" class="audio-container">
-        <audio controls title="Judul Lagu 3">
-            <source src="https://h.top4top.io/m_29059w7o71.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
+<div class="audio-group">
+  <p class="song-title" onclick="toggleAudio('audio3')">Heal</p>
+  <div id="audio3" class="audio-container">
+    <audio preload="auto" style="display: none;">
+      <source src="https://h.top4top.io/m_29059w7o71.mp3" type="audio/mp3">
+    </audio>
+  </div>
 
-    <!-- Pemutar Lagu 4 -->
-    <p class="song-title" onclick="toggleAudio('audio4')">Alone</p>
-    <div id="audio4" class="audio-container">
-        <audio controls title="Judul Lagu 4">
-            <source src="https://c.top4top.io/m_2905cjpy11.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
+<div class="audio-group">
+  <p class="song-title" onclick="toggleAudio('audio4')">Alone</p>
+  <div id="audio4" class="audio-container">
+    <audio preload="auto" style="display: none;">
+      <source src="https://c.top4top.io/m_2905cjpy11.mp3" type="audio/mp3">
+    </audio>
+  </div>
     
-        <!-- Pemutar Lagu 5 -->
-    <p class="song-title" onclick="toggleAudio('audio5')">Interstellar</p>
-    <div id="audio5" class="audio-container">
-        <audio controls title="Judul Lagu 5">
-            <source src="https://h.top4top.io/m_2896c16hj1.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
+<div class="audio-group">
+  <p class="song-title" onclick="toggleAudio('audio6')">Interstellar</p>
+  <div id="audio6" class="audio-container">
+    <audio preload="auto" style="display: none;">
+      <source src="https://h.top4top.io/m_2896c16hj1.mp3" type="audio/mp3">
+    </audio>
+  </div>
     
-            <!-- Pemutar Lagu 6 -->
-    <p class="song-title" onclick="toggleAudio('audio6')">Sad</p>
-    <div id="audio6" class="audio-container">
-        <audio controls title="Judul Lagu 6">
-            <source src="https://l.top4top.io/m_2896j2ab11.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
+<div class="audio-group">
+  <p class="song-title" onclick="toggleAudio('audio7')">Sad</p>
+  <div id="audio7" class="audio-container">
+    <audio preload="auto" style="display: none;">
+      <source src="https://l.top4top.io/m_2896j2ab11.mp3" type="audio/mp3">
+    </audio>
+  </div>
     
-                <!-- special 7 -->
-    <p class="song-title" onclick="toggleAudio('audio7')">Quran</p>
-    <div id="audio7" class="audio-container">
-        <audio controls title="Judul Lagu 7">
-            <source src="https://h.top4top.io/m_2896yin7w1.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
+<div class="audio-group">
+  <p class="song-title" onclick="toggleAudio('audio8')">Quran</p>
+  <div id="audio8" class="audio-container">
+    <audio preload="auto" style="display: none;">
+      <source src="https://h.top4top.io/m_2896yin7w1.mp3" type="audio/mp3">
+    </audio>
+  </div>
 
-            <!-- Pemutar Lagu 8 -->
-    <p class="song-title" onclick="toggleAudio('audio8')">Calm</p>
-    <div id="audio8" class="audio-container">
-        <audio controls title="Judul Lagu 8">
-            <source src="https://g.top4top.io/m_2905plpx71.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
+<div class="audio-group">
+  <p class="song-title" onclick="toggleAudio('audio9')">Calm</p>
+  <div id="audio9" class="audio-container">
+    <audio preload="auto" style="display: none;">
+      <source src="https://g.top4top.io/m_2905plpx71.mp3" type="audio/mp3">
+    </audio>
+  </div>
+    
+<div class="audio-group">
+  <p class="song-title" onclick="toggleAudio('audio10')">Minecraft</p>
+  <div id="audio10" class="audio-container">
+    <audio preload="auto" style="display: none;">
+      <source src="https://l.top4top.io/m_2906kpkca1.mp3" type="audio/mp3">
+    </audio>
+  </div>
+    
+<div class="audio-group">
+  <p class="song-title" onclick="toggleAudio('audio11')">Alpha Music</p>
+  <div id="audio11" class="audio-container">
+    <audio preload="auto" style="display: none;">
+      <source src="https://c.top4top.io/m_2905mqbwe1.mp3" type="audio/mp3">
+    </audio>
+  </div>
+    
+<div class="audio-group">
+  <p class="song-title" onclick="toggleAudio('audio12')">Alone & Peace</p>
+  <div id="audio12" class="audio-container">
+    <audio preload="auto" style="display: none;">
+      <source src="https://l.top4top.io/m_28931qrti1.mp3" type="audio/mp3">
+    </audio>
+  </div>
+    
+<div class="audio-group">
+  <p class="song-title" onclick="toggleAudio('audio13')">Lucid Dream</p>
+  <div id="audio13" class="audio-container">
+    <audio preload="auto" style="display: none;">
+      <source src="https://h.top4top.io/m_2905gx5w51.mp3" type="audio/mp3">
+    </audio>
+    </div>
+   <p class="white-text">©fahril ahmad</p>
     </div>
     
-                <!-- Pemutar Lagu 9 -->
-    <p class="song-title" onclick="toggleAudio('audio9')">Minecraft</p>
-    <div id="audio9" class="audio-container">
-        <audio controls title="Judul Lagu 9">
-            <source src="https://j.top4top.io/m_2905trf8c1.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
+<hr  _______________________________________________________________________________________________________________________________________________________________
     
-                    <!-- Pemutar Lagu 10 -->
-    <p class="song-title" onclick="toggleAudio('audio10')">Alpha Music</p>
-    <div id="audio10" class="audio-container">
-        <audio controls title="Judul Lagu 10">
-            <source src="https://c.top4top.io/m_2905mqbwe1.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
-    
-                            <!-- Pemutar Lagu 11 -->
-    <p class="song-title" onclick="toggleAudio('audio11')">Alone & Peace</p>
-    <div id="audio11" class="audio-container">
-        <audio controls title="Judul Lagu 11">
-            <source src="https://l.top4top.io/m_28931qrti1.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
-    
-                        <!-- Pemutar Lagu 12 -->
-    <p class="song-title" onclick="toggleAudio('audio12')">Lucid Dream</p>
-    <div id="audio12" class="audio-container">
-        <audio controls title="Judul Lagu 12">
-            <source src="https://h.top4top.io/m_2905gx5w51.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
-    
-    <p class="white-text">©fahril ahmad</p>
-    </div>
+    <div class="button-container">
+        <a class ="donate" <a href="https://gamefax.rf.gd">PlayGame</a>
+
     <script>
-    function toggleAudio(audioId) {
-        var audioContainer = document.getElementById(audioId);
-        var audio = audioContainer.querySelector('audio');
-        audioContainer.style.display = audioContainer.style.display == 'none' ? 'block' : 'none';
-
-        // Pause audio when hiding
-        if (audioContainer.style.display === 'none') {
-            audio.pause();
+         function showPolicy() {
+            alert("Information:\n\n [] Last updated: Nov 22, 2023\n [] We do not collect any information about you :\n                                                        \n1. Provide and improve your experience on our website.\n2. Give you a wonderful music listening experience.  \n3  Fill your free time by listening music.");
         }
-    }
 
-    function showMore() {
-        var audioContainers = document.querySelectorAll('.audio-container');
-        audioContainers.forEach(function (container) {
-            container.style.display = 'block';
-        });
-
-        // Hide the "Show More" button
-        document.getElementById('showMoreButton').style.display = 'none';
-    }
-     </script>
+        function showCreator() {
+            alert("©Fahril Ahmad");
+        }
+    </script>
     
+<script>
+function toggleAudio(audioId) {
+  var audioContainer = document.getElementById(audioId);
+  var audio = audioContainer.querySelector('audio');
+  audioContainer.style.display = audioContainer.style.display == 'none' ? 'block' : 'none';
+
+  if (audioContainer.style.display === 'block') {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+}
+</script>
+    
+    <script>
+    // Mencegah klik kanan di seluruh halaman
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    });
+
+    // Mencegah kombinasi keyboard untuk membuka developer tools
+    document.onkeydown = function (e) {
+        if (e.keyCode == 123) {
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+            return false;
+        }
+        if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+            return false;
+        }
+    };
+     </script>
+     
 </body>
-        </html>
+</html>
