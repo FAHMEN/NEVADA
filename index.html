@@ -14,6 +14,7 @@
             overflow: hidden;
             background: linear-gradient(to bottom, #b4b2b2 0%, #b4b2b2 70%, #b4b2b2 100%);
             position: relative;
+            font-family: Arial, sans-serif;
         }
 
         .rocket {
@@ -117,6 +118,22 @@
             pointer-events: none;
             opacity: 0;
         }
+        
+/* CSS untuk tombol "Close" */
+.close-button {
+    position: absolute;
+    top: 480px; /* Sesuaikan jarak dari atas */
+    right: 60px; /* Sesuaikan jarak dari kanan */
+    background: none;
+    border: none;
+    font-size: 30px; /* Sesuaikan ukuran font */
+    font-weight: bold;
+    cursor: pointer;
+    color: #ff003b; /* Warna ikon tanda silang */
+    z-index: 2000; /* Agar berada di atas konten lainnya */
+    padding: 20px;
+    border-radius: 25px !important;
+}
 
         @keyframes speedEffect {
             0% {
@@ -306,12 +323,136 @@
         a:hover:after {
             width: 100%;
         }
+
+        /* Burger Menu Styles */
+        .burger-menu {
+            position: fixed;
+            top: 20px;
+            right: 40px;
+            z-index: 1000;
+            cursor: pointer;
+            width: 130px;
+            height: 90px;
+        }
+
+        .burger-menu div {
+            width: 100%;
+            height: 10px;
+            background-color: #FFFFFF;
+            margin: 28px 0;
+            transition: 0.3s;
+        }
+
+        .burger-menu.open div:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .burger-menu.open div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger-menu.open div:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .popup-content {
+            background: white;
+            padding: 300px;
+            border-radius: 60px;
+            text-align: center;
+            width: 70%;
+            font-size: 90px;
+            width: 800px;
+        }
+
+        .popup-content h2 {
+            margin: 0;
+        }
+
+        .popup-content p {
+            margin: 6px 0;
+        }
+
+        .popup-content button {
+            background: #ff003b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 80px;
+        }
+
+        .popup-content button:hover {
+            background: #cc002a;
+        }
+
+        .popup-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.popup-content ul li {
+    margin: 20px 0;
+    position: relative;
+}
+
+.popup-content ul li:nth-child(odd) {
+    transform: translateX(-90px); /* Geser ke kiri untuk item ganjil */
+}
+
+.popup-content ul li:nth-child(even) {
+    transform: translateX(20px); /* Geser ke kanan untuk item genap */
+}
+
+.popup-content ul li a {
+    color: #ff003b;
+    text-decoration: none;
+    font-size: 80px;
+}
+
+.popup-content ul li a:hover {
+    text-decoration: underline;
+}
+
+/* CSS untuk tombol "Back" */
+.back-button {
+    display: none; /* Awalnya disembunyikan */
+    position: absolute;
+    top: 820px;
+    left: 1230px;
+    background: none;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    color: #ff003b; /* Warna tombol */
+    z-index: 2000;
+}
+
+.back-button:hover {
+    color: #cc002a;
+}
     </style>
 </head>
 <body>
     <div class="rocket">
         <div class="speed-lines"></div>
-
         <div class="rocket-body">
             <div class="body"></div>
             <div class="fin fin-left"></div>
@@ -334,47 +475,128 @@
             <div style="top: 35%; left: 80%; animation-delay: 1.5s;"></div>
             <div style="top: 45%; left: 90%; animation-delay: 2s;"></div>
         </div>
-
         <div class="wrapper">
             <a id="launchButton" href="#"><span>Start Studying</span></a>
         </div>
-
         <audio id="audio1" src="https://h.top4top.io/m_2896c16hj1.mp3"></audio>
         <audio id="audio2" src="https://c.top4top.io/m_2905cjpy11.mp3"></audio>
         <audio id="audio3" src="https://l.top4top.io/m_2906kpkca1.mp3"></audio>
         <audio id="audio4" src="https://l.top4top.io/m_28931qrti1.mp3"></audio>
+        <audio id="fixedAudio" src="https://dl.sndup.net/dk3h8/rocket-landing-38715.rocket-landing-38715"></audio>
     </div>
+
+    <!-- Burger Menu -->
+    <div class="burger-menu" id="burgerMenu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Popup -->
+  <!-- Popup -->
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <button class="close-button" onclick="closePopup()">&times;</button>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="mailto:anonymousteam91@gmail.com">Contact</a></li>
+            <li><a href="https://youtube.com">YouTube</a></li>
+            <li><a href="#" id="infoButton">Information</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Information Popup -->
+<div class="popup" id="infoPopup">
+    <div class="popup-content">
+        <button class="close-button" onclick="closeInfoPopup()">&times;</button>
+        <button class="back-button" onclick="showPopup()">➡</button>
+        <h2>Information</h2>
+        <p>Website: BELUM ADA BJIRRR 🗿</p>
+        <p>&copy; FAhMEN</p>
+    </div>
+</div>
+
+
 
     <script>
         document.getElementById('launchButton').addEventListener('click', function(event) {
-            event.preventDefault();
-            this.style.display = 'none';
+    event.preventDefault();
+    this.style.display = 'none';
 
-            const audios = [
-                document.getElementById('audio1'),
-                document.getElementById('audio2'),
-                document.getElementById('audio3'),
-                document.getElementById('audio4')
-            ];
-            const randomIndex = Math.floor(Math.random() * audios.length);
-            const selectedAudio = audios[randomIndex];
+    const audios = [
+        document.getElementById('audio1'),
+        document.getElementById('audio2'),
+        document.getElementById('audio3'),
+        document.getElementById('audio4')
+    ];
+    const randomIndex = Math.floor(Math.random() * audios.length);
+    const selectedAudio = audios[randomIndex];
 
-            selectedAudio.play();
+    // Mainkan musik acak
+    selectedAudio.play();
+    
+    // Mainkan musik tetap
+    const fixedAudio = document.getElementById('fixedAudio');
+    fixedAudio.play();
 
-            const rocket = document.querySelector('.rocket');
-            rocket.style.animation = 'launch 5s ease-in-out forwards, centerRocket 5s 5s ease-in-out forwards';
-            document.body.style.animation = 'darkenBackground 5s ease-in-out forwards';
-            document.body.style.animationDelay = '3s';
-        });
+    const rocket = document.querySelector('.rocket');
+    rocket.style.animation = 'launch 5s ease-in-out forwards, centerRocket 5s 5s ease-in-out forwards';
+    document.body.style.animation = 'darkenBackground 5s ease-in-out forwards';
+    document.body.style.animationDelay = '3s';
+});
 
-        for (let i = 0; i < 100; i++) {
-            const star = document.createElement('div');
-            star.classList.add('star');
-            star.style.left = Math.random() * 100 + 'vw';
-            star.style.animationDuration = Math.random() * 3 + 3 + 's';
-            star.style.animationDelay = Math.random() * 2 + 's';
-            document.body.appendChild(star);
-        }
+for (let i = 0; i < 100; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star');
+    star.style.left = Math.random() * 100 + 'vw';
+    star.style.animationDuration = Math.random() * 3 + 3 + 's';
+    star.style.animationDelay = Math.random() * 2 + 's';
+    document.body.appendChild(star);
+}
+
+const burgerMenu = document.getElementById('burgerMenu');
+const popup = document.getElementById('popup');
+const infoButton = document.getElementById('infoButton');
+const infoPopup = document.getElementById('infoPopup');
+const backButton = document.querySelector('.back-button');
+
+burgerMenu.addEventListener('click', function() {
+    this.classList.toggle('open');
+    if (this.classList.contains('open')) {
+        popup.style.display = 'flex';
+        infoPopup.style.display = 'none'; // Pastikan info popup tersembunyi
+    } else {
+        popup.style.display = 'none';
+        infoPopup.style.display = 'none'; // Pastikan info popup tersembunyi
+    }
+});
+
+infoButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    popup.style.display = 'none';
+    infoPopup.style.display = 'flex';
+    backButton.style.display = 'block'; // Tampilkan tombol kembali
+});
+
+function closePopup() {
+    popup.style.display = 'none';
+    burgerMenu.classList.remove('open');
+    infoPopup.style.display = 'none'; // Pastikan info popup tersembunyi
+    backButton.style.display = 'none'; // Sembunyikan tombol kembali
+}
+
+function closeInfoPopup() {
+    infoPopup.style.display = 'none';
+    burgerMenu.classList.remove('open');
+    backButton.style.display = 'none'; // Sembunyikan tombol kembali
+}
+
+function showPopup() {
+    popup.style.display = 'flex';
+    infoPopup.style.display = 'none'; // Sembunyikan info popup
+    backButton.style.display = 'none'; // Sembunyikan tombol kembali
+}
     </script>
 </body>
 </html>
