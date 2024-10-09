@@ -23,6 +23,10 @@
             animation: none;
         }
 
+        .popup-content button:active, .popup-content button:focus, .popup-content button:hover {
+    color: white;
+}
+
         .rocket-body {
             width: 120px;
             animation: bounce 0.5s infinite;
@@ -120,20 +124,20 @@
         }
         
 /* CSS untuk tombol "Close" */
-.close-button {
-    position: absolute;
-    top: 480px; /* Sesuaikan jarak dari atas */
-    right: 60px; /* Sesuaikan jarak dari kanan */
-    background: none;
-    border: none;
-    font-size: 30px; /* Sesuaikan ukuran font */
-    font-weight: bold;
-    cursor: pointer;
-    color: #ff003b; /* Warna ikon tanda silang */
-    z-index: 2000; /* Agar berada di atas konten lainnya */
-    padding: 20px;
-    border-radius: 25px !important;
-}
+ .close-button {
+        position: absolute;
+        top: 90px;
+        right: 90px; /* Posisi tetap di kanan atas */
+        background: none;
+        border: none;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        color: #ff003b;
+        z-index: 2000;
+        padding: 10px;
+        border-radius: 5px;
+    }
 
         @keyframes speedEffect {
             0% {
@@ -431,19 +435,19 @@
     text-decoration: underline;
 }
 
-/* CSS untuk tombol "Back" */
 .back-button {
-    display: none; /* Awalnya disembunyikan */
-    position: absolute;
-    top: 820px;
-    left: 1230px;
-    background: none;
-    border: none;
-    font-size: 40px;
-    cursor: pointer;
-    color: #ff003b; /* Warna tombol */
-    z-index: 2000;
-}
+        display: none; /* Awalnya disembunyikan */
+        position: absolute;
+        top: 20vh; /* Posisi vertikal di tengah layar */
+        left: 70vw; /* Posisi horizontal di tengah layar */
+        transform: translate(-50%, -50%); /* Agar tombol benar-benar di tengah */
+        background: none;
+        border: none;
+        font-size: 35px;
+        cursor: pointer;
+        color: #ff003b; /* Warna tombol */
+        z-index: 2000;
+    }
 
 .back-button:hover {
     color: #cc002a;
@@ -513,7 +517,7 @@
         <button class="close-button" onclick="closeInfoPopup()">&times;</button>
         <button class="back-button" onclick="showPopup()">➡</button>
         <h2>Information</h2>
-        <p>This website was made by Fahmen!</p>
+        <p>This website was made by fahril!</p>
         <p>&copy; FAhMeN🕴️</p>
     </div>
 </div>
@@ -566,10 +570,11 @@ burgerMenu.addEventListener('click', function() {
     this.classList.toggle('open');
     if (this.classList.contains('open')) {
         popup.style.display = 'flex';
-        infoPopup.style.display = 'none'; // Pastikan info popup tersembunyi
+        infoPopup.style.display = 'none'; 
+        document.querySelector('.popup-content button').style.color = 'black'; // Ubah teks jadi hitam
     } else {
         popup.style.display = 'none';
-        infoPopup.style.display = 'none'; // Pastikan info popup tersembunyi
+        infoPopup.style.display = 'none'; 
     }
 });
 
